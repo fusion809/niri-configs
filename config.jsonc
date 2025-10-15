@@ -9,7 +9,7 @@
     // Choose the order of the modules
     "modules-left": [
 	"custom/archicon",
-        "niri/workspaces",
+        "workspaces",
         "niri/mode",
 	"custom/weather",
 	"custom/wallpaper"
@@ -72,7 +72,25 @@
              "default": " "
          }
     },
-    "custom/archicon": {
+    "workspaces": {
+    "format": "{name}",
+    "format-icons": {
+        "focused": "",
+        "active": "",
+        "default": ""
+    },
+    // Optional: show special workspaces
+    "show-special": true,
+    // Optional: show special workspaces only if visible
+    "special-visible-only": true,
+    // Optional: show only persistent workspaces
+    "persistent-only": false,
+    // Optional: show workspaces from all outputs
+    "all-outputs": false,
+    // Optional: show only the active workspace
+    "active-only": false
+},
+"custom/archicon": {
 	"format": " ",
 		"tooltip": false,
 		"menu": "on-click",

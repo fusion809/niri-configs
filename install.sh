@@ -14,7 +14,7 @@ if ! [[ -d $HOME/.local/bin ]]; then
 	mkdir -p $HOME/.local/bin
 fi
 ln -sf $PWD/../hyprland-configs/bluetooth-connect ~/.local/bin/
-ln -sf $PWD/wallpaper ~/.local/bin/
+ln -sf $PWD/../hyprland-configs/wallpaper ~/.local/bin/
 if ! [[ -d $HOME/.config/waybar ]]; then
 	mkdir -p $HOME/.config/waybar
 fi

@@ -269,6 +269,9 @@ layout {
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar"
+spawn-sh-at-startup "/home/fusion809/Github/mine/config/niri-configs/install.sh"
+spawn-sh-at-startup "/home/fusion809/.local/bin/wallpaper"
+spawn-at-startup "google-chrome-stable"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -367,6 +370,8 @@ binds {
     Mod+Alt+K hotkey-overlay-title="Open Kitty" { spawn "kitty";}
     Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun -show-icons -icon-theme WhiteSur-dark"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Mod+V hotkey-overlay-title="Run VirtualBox" { spawn "virtualbox";}
+    Mod+O hotkey-overlay-title="Run RuneScape" { spawn-sh "steam steam://rungameid/1343400";}
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -390,7 +395,7 @@ binds {
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
     // or do a four-finger swipe up on a touchpad.
-    Mod+O repeat=false { toggle-overview; }
+    Mod+Shift+O repeat=false { toggle-overview; }
 
     Mod+Q repeat=false { close-window; }
 
@@ -577,8 +582,8 @@ binds {
     Mod+Shift+Equal { set-window-height "+10%"; }
 
     // Move the focused window between the floating and the tiling layout.
-    Mod+V       { toggle-window-floating; }
-    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+    Mod+Space       { toggle-window-floating; }
+    Mod+Shift+Space { switch-focus-between-floating-and-tiling; }
 
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
