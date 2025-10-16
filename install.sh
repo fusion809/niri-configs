@@ -35,4 +35,4 @@ if ! [[ -d $HOME/.config/alacritty ]]; then
 fi
 ln -sf $PWD/../hyprland-configs/alacritty.conf ~/.config/alacritty/
 popd
-yay -S alacritty kitty swaybg waybar bluetoothctl nautilus google-chrome steam rofi niri gvim-gtk2 wttrbar --noconfirm --needed
+yay -S alacritty kitty swaybg waybar bluetoothctl nautilus google-chrome steam rofi niri gvim-gtk2 wttrbarxwayland-satellite --noconfirm --needed

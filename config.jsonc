@@ -209,7 +209,7 @@
 		"menu-actions": {
 			"shutdown": "shutdown",
 			"reboot": "reboot",
-			"logout": "niri msg quit",
+			"logout": "niri msg action quit",
 			"suspend": "systemctl suspend",
 			"hibernate": "systemctl hibernate"
 		}
