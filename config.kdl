@@ -106,6 +106,62 @@ input {
     position x=1280 y=0
 }
 
+workspace "1" {
+	open-on-output "eDP-1"
+}
+
+workspace "2" {
+	open-on-output "eDP-1"
+}
+workspace "3" {
+	open-on-output "eDP-1"
+}
+
+workspace "4" {
+	open-on-output "eDP-1"
+}
+
+workspace "5" {
+	open-on-output "eDP-1"
+}
+
+workspace "6" {
+	open-on-output "eDP-1"
+}
+
+workspace "7" {
+	open-on-output "eDP-1"
+}
+
+workspace "8" {
+	open-on-output "eDP-1"
+}
+
+workspace "9" {
+	open-on-output "eDP-1"
+}
+
+workspace "10" {
+	open-on-output "eDP-1"
+}
+
+workspace "11" {
+	open-on-output "eDP-1"
+}
+
+workspace "12" {
+	open-on-output "eDP-1"
+}
+
+window-rule {
+	match at-startup=true app-id=r#"^Alacritty"#
+	open-on-workspace "2"
+}
+window-rule {
+	match at-startup=true app-id=r#"^google-chrome"#
+	open-on-workspace "1"
+}
+
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Layout
@@ -522,6 +578,9 @@ binds {
     F7 { focus-workspace 7; }
     F8 { focus-workspace 8; }
     F9 { focus-workspace 9; }
+    Mod+0 { focus-workspace 10;}
+    Mod+F1 { focus-workspace 11;}
+    Mod+F2 { focus-workspace 12;}
     Mod+Shift+F1 { move-column-to-workspace 1; }
     Mod+Shift+F2 { move-column-to-workspace 2; }
     Mod+Shift+F3 { move-column-to-workspace 3; }
@@ -531,6 +590,9 @@ binds {
     Mod+Shift+F7 { move-column-to-workspace 7; }
     Mod+Shift+F8 { move-column-to-workspace 8; }
     Mod+Shift+F9 { move-column-to-workspace 9; }
+    Mod+Shift+0 { move-column-to-workspace 10;}
+    Mod+Shift+1 { move-column-to-workspace 11;}
+    Mod+Shift+2 { move-column-to-workspace 12;}
 
     // Alternatively, there are commands to move just a single window:
     // Mod+Ctrl+1 { move-window-to-workspace 1; }
@@ -589,6 +651,7 @@ binds {
     // Windows in this column will appear as vertical tabs,
     // rather than stacked on top of each other.
     Mod+W { toggle-column-tabbed-display; }
+    Mod+Shift+W { spawn-sh "killall waybar; waybar"; }
 
     // Actions to switch layouts.
     // Note: if you uncomment these, make sure you do NOT have

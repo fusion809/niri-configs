@@ -9,8 +9,9 @@
     // Choose the order of the modules
     "modules-left": [
 	"custom/archicon",
-        "workspaces",
+        "niri/workspaces",
         "niri/mode",
+	"custom/workspaces",
 	"custom/weather",
 	"custom/wallpaper"
     ],
@@ -36,7 +37,16 @@
         "tray",
         "custom/power"
     ],
-
+"custom/workspaces": {
+    "format": "{}",
+        "interval": 2,
+        "return-type": "json",
+        "exec": "$HOME/GitHub/mine/config/niri-configs/niri-workspaces \"$WAYBAR_OUTPUT_NAME\"",
+        "on-click": "fuzzel",
+        "on-scroll-up": "$HOME/GitHub/mine/config/niri-configs/niri-workspaces up",
+        "on-scroll-down": "$HOME/GitHub/mine/config/niri-configs/niri-workspaces down",
+        "signal": 8
+},
    "custom/weather": {
     "format": "{}°",
     "tooltip": true,
@@ -50,13 +60,51 @@
 	   "interval": 1
    },
    // Modules configuration
-     "niri/workspaces": {
-	 "on-scroll-up": "niri msg focus-column next",
-         "on-scroll-down": "niri msg focus-column previous",
-         "all-outputs": true,
-         "on-click": "activate",
-         "format": "{name}: {icon}",
-         "format-icons": {
+    // "niri/workspaces": {
+	// "on-scroll-up": "niri msg focus-column next",
+        // "on-scroll-down": "niri msg focus-column previous",
+        // "all-outputs": true,
+        // "on-click": "activate",
+        // "format": "{name}: {icon}",
+        // "format-icons": {
+//             "1": " ",
+//             "2": " ",
+//             "3": " / ",
+//	     "4": " / ",
+//	     "5": " / ",
+//	     "6": " / ",
+//	     "7": " ",
+//	     "8": "󰝆",
+//	     "9": " ",
+//	     "10": " ",
+//             "urgent": " ",
+//             "focused": " ",
+//             "default": " "
+//         }
+//    },
+//    "workspaces": {
+//    "format": "{name}",
+//    "format-icons": {
+//        "focused": "",
+//        "active": "",
+//        "default": ""
+//    },
+    // Optional: show special workspaces
+//    "show-special": true,
+    // Optional: show special workspaces only if visible
+//    "special-visible-only": true,
+    // Optional: show only persistent workspaces
+//    "persistent-only": false,
+    // Optional: show workspaces from all outputs
+//    "all-outputs": false,
+    // Optional: show only the active workspace
+//    "active-only": false
+//},
+"niri/workspaces": {
+	"format": "{name}: {icon}",
+	"format-icons": {
+		// Named workspaces
+		// (you need to configure them in niri)
              "1": " ",
              "2": " ",
              "3": " / ",
@@ -66,29 +114,12 @@
 	     "7": " ",
 	     "8": "󰝆",
 	     "9": " ",
-	     "10": " ",
+	     "10": " ",
+	     "11": " ",
+	     "12": " ",
              "urgent": " ",
-             "focused": " ",
              "default": " "
-         }
-    },
-    "workspaces": {
-    "format": "{name}",
-    "format-icons": {
-        "focused": "",
-        "active": "",
-        "default": ""
-    },
-    // Optional: show special workspaces
-    "show-special": true,
-    // Optional: show special workspaces only if visible
-    "special-visible-only": true,
-    // Optional: show only persistent workspaces
-    "persistent-only": false,
-    // Optional: show workspaces from all outputs
-    "all-outputs": false,
-    // Optional: show only the active workspace
-    "active-only": false
+	}
 },
 "custom/archicon": {
 	"format": " ",
@@ -98,8 +129,10 @@
 		"menu-actions": {
 			"wiki": "xdg-open https://wiki.archlinux.org",
 			"aur": "xdg-open https://aur.archlinux.org",
-			"configs": "code ~/niri-configs",
-			"niri.conf": "gvim ~/.config/hypr/hyprland.conf",
+			"hyprlandconfigs": "code /home/fusion809/GitHub/mine/config/hyprland-configs",
+			"niriconfigs": "code /home/fusion809/GitHub/mine/config/niri-configs",
+			"hyprland.conf": "gvim ~/.config/hypr/hyprland.conf",
+			"config.kdl": "gvim ~/.config/niri/config.kdl",
 			"kitty.conf": "gvim ~/.config/kitty/kitty.conf",
 			"alacritty.toml": "gvim ~/.config/alacritty/alacritty.toml",
 			"config.jsonc": "gvim ~/.config/waybar/config.jsonc",
