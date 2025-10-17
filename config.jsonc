@@ -129,8 +129,8 @@
 		"menu-actions": {
 			"wiki": "xdg-open https://wiki.archlinux.org",
 			"aur": "xdg-open https://aur.archlinux.org",
-			"hyprlandconfigs": "code /home/fusion809/GitHub/mine/config/hyprland-configs",
-			"niriconfigs": "code /home/fusion809/GitHub/mine/config/niri-configs",
+			"hyprlandconfigs": "code $HOME/GitHub/mine/config/hyprland-configs",
+			"niriconfigs": "code $HOME/GitHub/mine/config/niri-configs",
 			"hyprland.conf": "gvim ~/.config/hypr/hyprland.conf",
 			"config.kdl": "gvim ~/.config/niri/config.kdl",
 			"kitty.conf": "gvim ~/.config/kitty/kitty.conf",
@@ -143,8 +143,8 @@
     },
     "custom/wallpaper": {
       "format": "󰸉 {}",                      // Nerd Font “wallpaper” icon (use any glyph you like)
-      "exec": "/home/fusion809/GitHub/mine/config/hyprland-configs/no-wallpapers",
-      "on-click": "/home/fusion809/.local/bin/wallpaper", // Command executed on click
+      "exec": "$HOME/GitHub/mine/config/hyprland-configs/no-wallpapers",
+      "on-click": "$HOME/.local/bin/wallpaper", // Command executed on click
       "interval": 1                       // Don’t poll or update automatically
     },
     "custom/bluetooth-connect": {
