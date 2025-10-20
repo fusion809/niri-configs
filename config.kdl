@@ -326,7 +326,7 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar"
 spawn-sh-at-startup "$HOME/Github/mine/config/niri-configs/install.sh"
-spawn-sh-at-startup "$HOME/.local/bin/wallpaper"
+spawn-sh-at-startup "$HOME/.local/bin/wallpaper systematic"
 spawn-at-startup "google-chrome-stable"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:

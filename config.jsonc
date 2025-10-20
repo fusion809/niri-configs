@@ -144,7 +144,7 @@
     "custom/wallpaper": {
       "format": "{} 󰸉",                      // Nerd Font “wallpaper” icon (use any glyph you like)
       "exec": "$HOME/GitHub/mine/config/hyprland-configs/no-wallpapers",
-      "on-click": "$HOME/.local/bin/wallpaper", // Command executed on click
+      "on-click": "$HOME/.local/bin/wallpaper systematic", // Command executed on click
       "interval": 1                       // Don’t poll or update automatically
     },
     "custom/bluetooth-connect": {
